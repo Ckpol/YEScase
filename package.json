@@ -1,0 +1,15 @@
+{
+  "name": "YEScase",
+  "version": "19.0.0",
+  "private": true,
+  "description": "Учебный проект 'Перенос графики с PSD'",
+  "devDependencies": {
+    "eslint": "7.1.0"
+  },
+  "scripts": {
+    "test": "eslint js/"
+  },
+  "engines": {
+    "node": "8.11"
+  }
+}
