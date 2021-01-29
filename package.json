@@ -4,7 +4,8 @@
   "private": true,
   "description": "Учебный проект 'Перенос графики с PSD'",
   "devDependencies": {
-    "eslint": "7.1.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.1.0"
   },
   "scripts": {
     "test": "eslint js/"

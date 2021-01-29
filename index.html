@@ -267,13 +267,16 @@
         <form class="popup_form" action="URL" method="post" name="popup_form">
           <h2>Пробное занятие</h2>
           <p>Оставьте свой номер телефона и наш оператор свяжется с вами для согласования даты занятия</p>
-          <input class="popup_form__phone" type="tel" autocomplete="off" placeholder="+7 ( _ _ _ ) _ _ _ -  _ _ - _ _" minlength="11" maxlength="12" pattern="\+7\d{10}|\d{11}" required>
+          <input class="popup_form__phone" type="tel" name="phone" autocomplete="off" placeholder="+7 ( _ _ _ ) _ _ _ -  _ _ - _ _" minlength="11" maxlength="12" pattern="\+7\d{10}|\d{11}" required>
           <button class="popup_form__send button" type="submit">Записаться на пробное занятие</button>
           <span class="popup_form__close" tabindex="0"></span>
         </form>
       </div>
     <!-- </template> -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/upload.js"></script>
+    <script type="module" src="js/form.js"></script>
+
   </body>
 
 </html>
