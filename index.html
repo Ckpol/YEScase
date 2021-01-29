@@ -8,18 +8,13 @@
   </head>
 
   <body>
-  <!-- <div class="form">
-      <form action="URL" method="get">
-      </form>
-    </div> -->
-
     <header class="main_header">
       <div class="container">
         <img src="img/yes-logo.svg" width="100" height="36" class="main_header__logo" alt="Логотип школы Yes">
         <ul class="main_header__contacts">
           <li class="main_header__contacts__item">г. Москва ул. Северная, 35</li>
           <li class="main_header__contacts__item">+7 (945) 46-54-67</li>
-          <li class="main_header__contacts__item"><a href="#" class="calback_buttom">Заказать звонок</a></li>
+          <li class="main_header__contacts__item"><a href="#" class="calback_button contact_button">Заказать звонок</a></li>
         </ul>
         <nav class="site_navigation">
           <ul class="navigation_list">
@@ -47,7 +42,7 @@
           <span class="underline"></span>
           <p>Освойте английский для путешествий<br>
             и научитесь объясняться в любой ситуации</p>
-          <a href="#" class="buttom">Записаться на пробное занятие</a>
+          <a href="#" class="button contact_button">Записаться на пробное занятие</a>
         </div>
       </section>
       <section class="problems">
@@ -227,7 +222,7 @@
                   было так легко и спокойно! Мы ни разу не заблудились, в аэропорту меня водила за<br>
                   собой пожилая пара в качестве переводчика.<br>
                   Спасибо вам, это было очень полезно!</p>
-                <a href="#" class='calback_buttom'>Вконтакте</a>
+                <a href="#" class='calback_button'>Вконтакте</a>
               </blockquote>
             </li>
             <!-- <li class="comments_item">
@@ -236,7 +231,7 @@
                 <cite>Александра Иванова</cite>
                 <p>Курс прошел незаметно и оставил после себя только хорошие воспоминания. Нашу группу на постоянной основе вела Алла, Настя и Женя приходили к нам для нарабатывания практики общения.
                   Неделю назад были с мужем в Лондоне - хоть люди разные и речь у всех разная, но было так легко и спокойно! Мы ни разу не заблудились, в аэропорту меня водила за собой пожилая пара в качестве переводчика. Спасибо вам, это было очень полезно!</p>
-                <a href="#" class="calback_buttom">Вконтакте</a>
+                <a href="#" class="calback_button">Вконтакте</a>
               </blockquote>
             </li> -->
           </ul>
@@ -260,12 +255,25 @@
           <li class="footer_contacts__item">Школа английского языка</li>
           <li class="footer_contacts__item">г. Москва ул. Северная, 35</li>
           <li class="footer_contacts__item">+7 (945) 46-54-67</li>
-          <li class="footer_contacts__item"><a href="#" class="calback_buttom">Заказать звонок</a></li>
+          <li class="footer_contacts__item"><a href="#" class="calback_button contact_button">Заказать звонок</a></li>
         </ul>
         <!-- может быть это будет обычный button для всплытия формы захвата поверх сайта -->
 
       </div>
     </footer>
+
+    <!-- <template id="popup"> -->
+      <div class="popup hidden">
+        <form class="popup_form" action="URL" method="post" name="popup_form">
+          <h2>Пробное занятие</h2>
+          <p>Оставьте свой номер телефона и наш оператор свяжется с вами для согласования даты занятия</p>
+          <input class="popup_form__phone" type="tel" autocomplete="off" placeholder="+7 ( _ _ _ ) _ _ _ -  _ _ - _ _" minlength="11" maxlength="12" pattern="\+7\d{10}|\d{11}" required>
+          <button class="popup_form__send button" type="submit">Записаться на пробное занятие</button>
+          <span class="popup_form__close" tabindex="0"></span>
+        </form>
+      </div>
+    <!-- </template> -->
+    <script src="js/main.js"></script>
   </body>
 
 </html>
