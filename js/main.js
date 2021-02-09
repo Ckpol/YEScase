@@ -1,8 +1,12 @@
 import {checkPopupStatus} from './form.js';
+import {commentsClickHandler} from './commentsSlider.js';
+import {sliderMoveElement} from './commentsSlider.js';
+import {sliderList} from './commentsSlider.js';
 
 const contactButtons = document.querySelectorAll('.contact_button');
 const popup = document.querySelector('.popup');
 const buttonsArray = Array.from(contactButtons);
+
 let isPopupOpen = false;
 
 buttonsArray.map(function (item) {
@@ -11,6 +15,8 @@ buttonsArray.map(function (item) {
 });
 
 document.addEventListener('keydown', isEscEvent);
+sliderMoveElement.addEventListener('mousedown',commentsClickHandler);
+sliderList.addEventListener('mousedown', commentsClickHandler);
 
 function callBackButtonClickHandler() {
   changePopupStatus();
@@ -25,16 +31,14 @@ function callBackButtonPressHandler(evt) {
       checkPopupStatus();
       evt.preventDefault();
     } else {
-      console.log('Отмена')
       evt.preventDefault();
     }
   }
 }
 
-function changePopupStatus() {//
+function changePopupStatus() {
   popup.classList.toggle('hidden');
   isPopupOpen = !isPopupOpen;
-  console.log(isPopupOpen)
 }
 
 function isEscEvent(evt) {

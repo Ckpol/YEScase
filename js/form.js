@@ -2,10 +2,8 @@ import {isPopupOpen} from './main.js';
 import {changePopupStatus} from './main.js';
 import {sendData} from './upload.js';
 import {myUrl} from './upload.js';
+import {MIN_PHONE_LENGTH, MAX_PHONE_LENGTH, PHONE_REGEXP} from './util.js';
 
-const MIN_PHONE_LENGTH = 11;
-const MAX_PHONE_LENGTH = 12;
-const PHONE_REGEXP = /[^\d | +]/;
 const popup = document.querySelector('.popup');
 const popupForm = popup.querySelector('.popup_form');
 const closePopupElem = popupForm.querySelector('.popup_form__close');

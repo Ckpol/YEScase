@@ -5,10 +5,13 @@
   "description": "Учебный проект 'Перенос графики с PSD'",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.1.0"
+    "eslint": "^7.1.0",
+    "webpack": "5.21.2",
+    "webpack-cli": "4.5.0"
   },
   "scripts": {
-    "test": "eslint js/"
+    "test": "eslint js/",
+    "build": "webpack --mode production"
   },
   "engines": {
     "node": "8.11"
