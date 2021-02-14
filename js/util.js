@@ -1,8 +1,6 @@
-const DELAY = 3000;
-const ADDITONAL_DELAY = 5000;
-const COMMETNS_QUANTITY = 3;
-const MIN_PHONE_LENGTH = 11;
-const MAX_PHONE_LENGTH = 12;
-const PHONE_REGEXP = /[^\d | +]/;
-
-export {DELAY, ADDITONAL_DELAY, COMMETNS_QUANTITY, MIN_PHONE_LENGTH, MAX_PHONE_LENGTH, PHONE_REGEXP};
+export const DELAY = 3000;
+export const ADDITONAL_DELAY = 5000;
+export const COMMETNS_QUANTITY = 3;
+export const MIN_PHONE_LENGTH = 11;
+export const MAX_PHONE_LENGTH = 12;
+export const PHONE_REGEXP = /[^\d | +]/;

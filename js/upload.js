@@ -11,7 +11,7 @@ const sendData = async (url, data) => {
     throw new Error (`Ошибка, статус ${response.status}`)
   }
 
-  return await response.json();
+  return response;
 }
 
 export {sendData, myUrl};

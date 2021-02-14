@@ -1,4 +1,5 @@
-import {DELAY,
+import {
+  DELAY,
   ADDITONAL_DELAY,
   COMMETNS_QUANTITY
  } from './util.js';
@@ -34,7 +35,7 @@ function changeComment() {
   }
 }
 
-  function commentsClickHandler(evt) {
+function commentsClickHandler(evt) {
   evt.preventDefault();
   clearInterval(timerId);
   sliderList.classList.remove('animated');

@@ -26,11 +26,13 @@ function popupBackgroundClickHandler(evt) {
 
 function formSubmitHandler(evt) {
   sendData(myUrl, new FormData(popupForm))
-  .then(() => {
+  .then((response) => {
+    response.json();
     popupForm.reset();
+    showMessage('Заявка отправлена');
   })
   .catch((err) => {
-    console.log(err);
+    showMessage(err);
   });
 
   evt.preventDefault();
@@ -81,6 +83,21 @@ function checkPopupStatus() {
     popupFormPhone.removeEventListener('blur', phoneBlurHandler);
     popupFormPhone.removeEventListener('input', phoneValidityHandler);
   }
+}
+
+function showMessage(message) {
+  const elem= document.createElement('div');
+  elem.style = `z-index: 100; margin: 0 auto; text-align: center; background-color: red;`;
+  elem.style.position = `absolute`;
+  elem.style.left = 0;
+  elem.style.right = 0;
+  elem.style.fontSize = `30px`;
+
+  elem.textContent = message;
+  document.body.insertAdjacentElement(`afterbegin`, elem);
+  setTimeout(() => {
+    elem.remove();
+  }, 2000);
 }
 
 export {checkPopupStatus};
